@@ -100,6 +100,25 @@ h1 { font-size: clamp(2rem, 3.2vw, 3rem); margin: 0 0 14px; }
 .upload-message { color: var(--muted); margin-top: 10px; }
 .link-box { margin-top: 16px; padding: 12px; border: 1px solid rgba(139, 92, 246, 0.28); border-radius: 14px; background: rgba(255,255,255,0.05); }
 .link-box a { color: #cdb8ff; word-break: break-all; }
+
+.example-box {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.example-box h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.example-box p {
+  margin: 6px 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
 .hidden { display: none; }
 
 @media (max-width: 640px) {
