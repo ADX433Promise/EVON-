@@ -37,7 +37,12 @@
 
           <label for="fileInput" class="dropzone" id="dropzone">
             <input id="fileInput" type="file" hidden />
-            <div class="dropzone__icon">📁</div>
+            <div class="dropzone__icon" aria-hidden="true">
+              <div class="evon-mark">
+                <span class="evon-play"></span>
+                <span class="evon-text">EVON</span>
+              </div>
+            </div>
             <p class="dropzone__title">اختر ملفًا واحدًا</p>
             <p class="dropzone__hint">سيتم حفظ الملف وربطه برابط يحتوي على حدّ فتحات</p>
           </label>
