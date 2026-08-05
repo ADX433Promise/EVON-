@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVON - مشاركة الملفات</title>
+    <meta name="description" content="ارفع ملفًا وأنشئ رابطًا قابلًا للمشاركة مع حد أقصى لعدد الفتحات" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__badge">EVON • مشاركة الملفات</p>
+        <h1>ارفع ملفًا وأنشئ رابطًا قابلًا للمشاركة.</h1>
+        <p class="hero__text">
+          اختَر ملفًا، حدّد عدد الفتحات المسموح بها، ثم حصل على رابط مباشر. هذه النسخة مصممة للنشر على GitHub Pages كواجهة أمامية، بينما الإرسال الحقيقي مع حدّ الافتتاح يحتاج خادمًا خلفيًا.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="upload-panel">
+        <div class="upload-card">
+          <div class="upload-card__header">
+            <div>
+              <p class="section-label">رفع ملف</p>
+              <h2>اختر الملف ثم أنشئ الرابط</h2>
+            </div>
+            <span class="status-pill">دعم حدّ الوصول</span>
+          </div>
+
+          <label for="fileInput" class="dropzone" id="dropzone">
+            <input id="fileInput" type="file" hidden />
+            <div class="dropzone__icon">📁</div>
+            <p class="dropzone__title">اختر ملفًا واحدًا</p>
+            <p class="dropzone__hint">سيتم حفظ الملف وربطه برابط يحتوي على حدّ فتحات</p>
+          </label>
+
+          <div class="controls">
+            <label class="field">
+              <span>عدد الأشخاص المسموح لهم بفتح الرابط</span>
+              <input id="limitInput" type="number" min="1" max="100" value="1" />
+            </label>
+            <button id="createLinkBtn" class="btn btn--primary">إنشاء الرابط</button>
+          </div>
+
+          <div class="progress-wrapper">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+
+          <p id="message" class="upload-message">لم يتم اختيار ملف بعد</p>
+
+          <div id="linkBox" class="link-box hidden">
+            <p>الرابط:</p>
+            <a id="shareLink" href="#" target="_blank" rel="noopener"></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
